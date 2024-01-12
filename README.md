@@ -1,19 +1,21 @@
 # [Notes] Svelte Tutorial for Beginners - NetNinja
 
-## What is Svelte?
+# Setting up a Svelte App
 
-- Is a compiler that creates reactive (for data changes) web apps and interfaces.
-- This can be used in creating the entire site or just parts of it.
+## Setup:
 
-## Svelte vs. other frameworks
+- Install degit to clone updated repository from GitHub or instead use Git commands.
 
-- Svelte is not a framework but a compiler.
-- It compiles the code for production at build time into a single, vanilla JS bundle; Svelte libraries are not deployed.
-- Extra scripts or libraries are not shipped to production.
-- Results in a faster running website.
+```
+npm install -g degit
+```
 
-## Prerequisites
+- Use `degit` to clone Svelte template from Sveltejs github repository onto the working directory.
 
-- HTML + CSS
-- JavaScript
-- Node.js v8+
+```
+degit sveltejs/template myproject
+```
+
+- This clones the following starter files:
+
+![Svelte Project Structure](images/project-structure.png)
