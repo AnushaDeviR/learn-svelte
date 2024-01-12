@@ -17,3 +17,8 @@
 - HTML + CSS
 - JavaScript
 - Node.js v8+
+
+## Contents: 
+
+1. [Introduction](https://github.com/AnushaDeviR/learn-svelte/tree/main)
+2. [Setting up a Svelte App](https://github.com/AnushaDeviR/learn-svelte/tree/lesson-1)
