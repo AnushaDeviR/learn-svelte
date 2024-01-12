@@ -19,3 +19,5 @@ degit sveltejs/template myproject
 - This clones the following starter files:
 
 ![Svelte Project Structure](images/project-structure.png)
+
+- Install the packages within the project using `npm install`, to run the application use: `npm run dev`
