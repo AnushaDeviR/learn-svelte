@@ -2,34 +2,26 @@
 
 # Svelte Basics
 
-## Basic Svelte folder structure:
+- The root component is called `App.svelte` and should have `.svelte` as an extension.
+- A svelte file contains 3 parts:
 
-```
-my-app
-│
-└── node_modules
-│ └─ bin
-│ │ ...
-└── public
-│ └─ build
-│ │ bundle.css
-│ │ bundle.js
-│ │ bundle.js.map
-│ favicon.png
-│ global.css
-│ index.html
-└── scripts
-│ │ setupTypeScript.js
-└── src
-│ │ App.svelte
-│ │ main.js
-│ .gitignore
-│ package-lock.json
-│ package.json
-│ README.md
-│ rollup.config.js
-```
+  1. script code - containing the component logic
+  2. HTML template - the building component
+  3. style tag - the component's stylings
 
-- The source code is within the `src` folder.
-- `rollup.config.js` is like a webpack file for svelte.
-- When deploying a Svelte application on production, Svelte complies the code and is put into `public` folder.
+- The `main.js` file runs first and sets everything.
+
+```js
+import App from "./App.svelte"; //automatically exported from .svelte files
+
+const app = new App({
+  //the App instance is injected into the `body` tag
+  target: document.body,
+  // sends data into the App instance
+  props: {
+    name: "world",
+  },
+});
+
+export default app;
+```
