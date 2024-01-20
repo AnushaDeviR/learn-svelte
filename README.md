@@ -1,23 +1,33 @@
 # [Notes] Svelte Tutorial for Beginners - NetNinja
 
-# Setting up a Svelte App
+# Svelte Basics
 
-## Setup:
+## Basic Svelte folder structure:
 
-- Install degit to clone updated repository from GitHub or instead use Git commands.
+my-app
+│  
+└── node_modules
+│ └─ bin
+│ │ ...
+└── public
+│ └─ build
+│ │ bundle.css
+│ │ bundle.js
+│ │ bundle.js.map
+│ favicon.png
+│ global.css
+│ index.html
+└── scripts
+│ │ setupTypeScript.js
+└── src
+│ │ App.svelte
+│ │ main.js
+│ .gitignore
+│ package-lock.json
+│ package.json
+│ README.md
+│ rollup.config.js
 
-```
-npm install -g degit
-```
-
-- Use `degit` to clone Svelte template from Sveltejs github repository onto the working directory.
-
-```
-degit sveltejs/template myproject
-```
-
-- This clones the following starter files:
-
-![Svelte Project Structure](images/project-structure.png)
-
-- Install the packages within the project using `npm install`, to run the application use: `npm run dev`
+- The source code is within the `src` folder.
+- `rollup.config.js` is like a webpack file for svelte.
+- When deploying a Svelte application on production, Svelte complies the code and is put into `public` folder.
