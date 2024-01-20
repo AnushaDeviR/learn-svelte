@@ -4,8 +4,9 @@
 
 ## Basic Svelte folder structure:
 
+```
 my-app
-│  
+│
 └── node_modules
 │ └─ bin
 │ │ ...
@@ -27,6 +28,7 @@ my-app
 │ package.json
 │ README.md
 │ rollup.config.js
+```
 
 - The source code is within the `src` folder.
 - `rollup.config.js` is like a webpack file for svelte.
