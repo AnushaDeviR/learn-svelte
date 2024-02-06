@@ -25,3 +25,9 @@ const app = new App({
 
 export default app;
 ```
+
+- When the project is built, svelte compiles all the components into a single JS file and places it into the bundle folder; these are called from the `index.html`.
+
+- Once the component is created it get injected in DOM which is fetched using the `document.body` query in the `main.js` file.
+
+- Under the `<script>` tag, if a variable's data is being passed as a prop then it must be exported, if not it will be undefined.

@@ -1,14 +1,19 @@
+<!-- this is the root component -->
 <script>
-  export let name;
+  let name = "World";
+  let beltColour = "black";
+
+  const handleChangeColour = () => {
+    beltColour = "orange";
+  };
 </script>
 
 <!-- other components are nested here -->
 <main>
   <h1>Hello {name}!</h1>
-  <p>
-    Visit the <a href="https://svelte.dev/tutorial">Svelte tutorial</a> to learn
-    how to build Svelte apps.
-  </p>
+  <p>{beltColour} belt</p>
+  <!-- svelte syntax which makes it easier for dynamic operations -->
+  <button on:click={handleChangeColour}>update belt colour</button>
 </main>
 
 <style>
