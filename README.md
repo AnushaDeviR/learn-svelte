@@ -24,3 +24,4 @@
 2. [Setting up a Svelte App](https://github.com/AnushaDeviR/learn-svelte/tree/lesson-2)
 3. [Svelte Basics](https://github.com/AnushaDeviR/learn-svelte/tree/lesson-3)
 4. [User Input and Data Binding](https://github.com/AnushaDeviR/learn-svelte/tree/lesson-4)
+5. [Reactive Values and Statements](https://github.com/AnushaDeviR/learn-svelte/tree/lesson-5)
