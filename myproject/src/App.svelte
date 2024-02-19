@@ -1,19 +1,20 @@
-<!-- this is the root component -->
 <script>
-  let firstName = "John";
-  let lastName = "Doe";
-  let beltColour = "black";
-
-  $: fullName = `${firstName} ${lastName}`;
-  $: console.log(beltColour);
+  let people = [
+    { name: "yoshi", beltColour: "black", age: 25, id: 1 },
+    { name: "mario", beltColour: "orange", age: 45, id: 2 },
+    { name: "luigi", beltColour: "brown", age: 15, id: 3 },
+  ];
 </script>
 
-<!-- other components are nested here -->
 <main>
-  <p style="color: {beltColour}">{fullName} - {beltColour} belt</p>
-  <input type="text" bind:value={firstName} />
-  <input type="text" bind:value={lastName} />
-  <input type="text" bind:value={beltColour} />
+  {#each people as person (person.id)}
+    <div>
+      <h4>{person.name}</h4>
+      <p>{person.age} years old, {person.beltColour} belt</p>
+    </div>
+  {:else}
+    <p>There are no people to show...</p>
+  {/each}
 </main>
 
 <style>

@@ -1,25 +1,27 @@
 # [Notes] Svelte Tutorial for Beginners - NetNinja
 
-# Svelte - Reactive values and statements
+# Svelte - Each Loops
 
-- Reactive values in Svelte are values that change according to the updates made to them.
+- When looping through an object - Svelte needs an `id` otherwise it would throw an error.
 
-```js
-// fullName is a reactive variable and whenever firstName or lastName changes, the variable gets updated instantly
-$: fullName = `${firstName} ${lastName}`;
-```
+```html
+<script>
+  let people = [
+    { name: "yoshi", beltColour: "black", age: 25, id: 1 },
+    { name: "mario", beltColour: "orange", age: 45, id: 2 },
+    { name: "luigi", beltColour: "brown", age: 15, id: 3 },
+  ];
+</script>
 
-- Reactive statements in Svelte updates upon any given changes of the data within the statement.
-
-```js
-// prints the data upon whenever the beltColour changes
-$: console.log(beltColour);
-```
-
-```js
-// prints both the vars upon any changes that takes place on the data
-$: {
-  console.log(beltColour);
-  console.log(fullName);
-}
+<main>
+  <!-- keys are within the brackets -->
+  {#each people as person (person.id)}
+  <div>
+    <h4>{person.name}</h4>
+    <p>{person.age} years old, {person.beltColour} belt</p>
+  </div>
+  {:else}
+  <p>There are no people to show...</p>
+  {/each} {/each}
+</main>
 ```
