@@ -25,3 +25,4 @@
 3. [Svelte Basics](https://github.com/AnushaDeviR/learn-svelte/tree/lesson-3)
 4. [User Input and Data Binding](https://github.com/AnushaDeviR/learn-svelte/tree/lesson-4)
 5. [Reactive Values and Statements](https://github.com/AnushaDeviR/learn-svelte/tree/lesson-5)
+6. [Each loops](https://github.com/AnushaDeviR/learn-svelte/tree/lesson-6)
