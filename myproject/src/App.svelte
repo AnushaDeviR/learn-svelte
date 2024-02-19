@@ -6,13 +6,19 @@
   const handleChangeColour = () => {
     beltColour = "orange";
   };
+
+  const handleInput = (e) => {
+    beltColour = e.target.value;
+  };
 </script>
 
 <!-- other components are nested here -->
 <main>
   <h1>Hello {name}!</h1>
-  <p>{beltColour} belt</p>
+  <p style="color: {beltColour}">{beltColour} belt</p>
   <!-- svelte syntax which makes it easier for dynamic operations -->
+  <!-- <input type="text" on:input={handleInput} value={beltColour} /> -->
+  <input type="text" bind:value={beltColour} />
   <button on:click={handleChangeColour}>update belt colour</button>
 </main>
 
