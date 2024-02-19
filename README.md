@@ -1,17 +1,25 @@
 # [Notes] Svelte Tutorial for Beginners - NetNinja
 
-# Svelte - User Input and Data Binding
+# Svelte - Reactive values and statements
 
-- In svelte two-way binding of the data in input can be done using the `bind:` directive. This allows data to flow the other way round from child to parent. [[Ref.](https://svelte.dev/docs/element-directives#bind-property)]
+- Reactive values in Svelte are values that change according to the updates made to them.
 
-```html
-<!-- traditional way of keeping the input and data display in sync -->
-<input type="text" on:input="{handleInput}" value="{beltColour}" />
-
-<!-- // svelte's way of updating the value in sync -->
-<input type="text" bind:value="{beltColour}" />
+```js
+// fullName is a reactive variable and whenever firstName or lastName changes, the variable gets updated instantly
+$: fullName = `${firstName} ${lastName}`;
 ```
 
-Notes:
+- Reactive statements in Svelte updates upon any given changes of the data within the statement.
 
-- A function without `()` is invoked only when it is used.
+```js
+// prints the data upon whenever the beltColour changes
+$: console.log(beltColour);
+```
+
+```js
+// prints both the vars upon any changes that takes place on the data
+$: {
+  console.log(beltColour);
+  console.log(fullName);
+}
+```

@@ -1,25 +1,19 @@
 <!-- this is the root component -->
 <script>
-  let name = "World";
+  let firstName = "John";
+  let lastName = "Doe";
   let beltColour = "black";
 
-  const handleChangeColour = () => {
-    beltColour = "orange";
-  };
-
-  const handleInput = (e) => {
-    beltColour = e.target.value;
-  };
+  $: fullName = `${firstName} ${lastName}`;
+  $: console.log(beltColour);
 </script>
 
 <!-- other components are nested here -->
 <main>
-  <h1>Hello {name}!</h1>
-  <p style="color: {beltColour}">{beltColour} belt</p>
-  <!-- svelte syntax which makes it easier for dynamic operations -->
-  <!-- <input type="text" on:input={handleInput} value={beltColour} /> -->
+  <p style="color: {beltColour}">{fullName} - {beltColour} belt</p>
+  <input type="text" bind:value={firstName} />
+  <input type="text" bind:value={lastName} />
   <input type="text" bind:value={beltColour} />
-  <button on:click={handleChangeColour}>update belt colour</button>
 </main>
 
 <style>
