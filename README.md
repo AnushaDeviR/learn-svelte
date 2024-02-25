@@ -27,3 +27,4 @@
 5. [Reactive Values and Statements](https://github.com/AnushaDeviR/learn-svelte/tree/lesson-5)
 6. [Each loops](https://github.com/AnushaDeviR/learn-svelte/tree/lesson-6)
 7. [In-line Event Handlers](https://github.com/AnushaDeviR/learn-svelte/tree/lesson-7)
+8. [Conditionals](https://github.com/AnushaDeviR/learn-svelte/tree/lesson-8)
