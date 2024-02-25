@@ -17,3 +17,5 @@
   <p>Not greater than 5</p>
 {/if}
 ```
+
+- This is used to render HTML elements according to the provided conditions.
