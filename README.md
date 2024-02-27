@@ -1,16 +1,29 @@
 # [Notes] Svelte Tutorial for Beginners - NetNinja
 
-# Svelte - Components
+# Svelte - CSS & Conditional Styles
 
-![Svelte Components Structure](svelte-components-structure.png)
+- The `global.css` file which is present under the public folder contains stylings that are applied across the project on different components.
 
-- To render the components, the component must be imported on its parent components.
+- Svelte bundles the css unique numbers to identify styling implemented upon each components.
+
+## Conditional Styles
 
 ```svelte
-// App.svelte
 <script>
-  import Button from './Button.svelte' // imports the component
-<script/>
+  let isPromo=true
+</script>
 
-<Button/> // renders the component
+<!-- promo class is applied upon the condition given by isPromo -->
+<div class="backdrop" class:promo={isPromo}>
+  <div class="modal">
+    <p>Sign up for offers!</p>
+  </div>
+</div>
+
+<style>
+  .promo .modal {
+    background-color: lightsalmon;
+    color: white;
+  }
+</style>
 ```
