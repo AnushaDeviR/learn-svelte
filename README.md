@@ -1,21 +1,16 @@
 # [Notes] Svelte Tutorial for Beginners - NetNinja
 
-# Svelte - Conditionals
+# Svelte - Components
 
-- Conditionals = if-checks in Svelte
+![Svelte Components Structure](svelte-components-structure.png)
+
+- To render the components, the component must be imported on its parent components.
 
 ```svelte
+// App.svelte
 <script>
-  let num = 5;
-</script>
+  import Button from './Button.svelte' // imports the component
+<script/>
 
-{#if num > 20}
-  <p>Greater than 20</p>
-{:else if num > 5}
-  <p>Greater than 5</p>
-{:else}
-  <p>Not greater than 5</p>
-{/if}
+<Button/> // renders the component
 ```
-
-- This is used to render HTML elements according to the provided conditions.
