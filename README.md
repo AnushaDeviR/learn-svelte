@@ -7,10 +7,12 @@
 - To render the components, the component must be imported on its parent components.
 
 ```svelte
-// App.svelte
+/* App.svelte */
 <script>
-  import Button from './Button.svelte' // imports the component
-<script/>
+/* imports the component */
+  import Button from './Button.svelte' 
+</script>
 
-<Button/> // renders the component
+/* renders the component */
+<Button/> 
 ```
