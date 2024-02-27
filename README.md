@@ -29,3 +29,4 @@
 7. [In-line Event Handlers](https://github.com/AnushaDeviR/learn-svelte/tree/lesson-7)
 8. [Conditionals](https://github.com/AnushaDeviR/learn-svelte/tree/lesson-8)
 9. [Components](https://github.com/AnushaDeviR/learn-svelte/tree/lesson-9)
+10. [CSS & Conditional Styles](https://github.com/AnushaDeviR/learn-svelte/tree/lesson-10)
