@@ -32,3 +32,4 @@
 10. [CSS & Conditional Styles](https://github.com/AnushaDeviR/learn-svelte/tree/lesson-10)
 11. [Props](https://github.com/AnushaDeviR/learn-svelte/tree/lesson-11)
 12. [Event Forwarding](https://github.com/AnushaDeviR/learn-svelte/tree/lesson-12)
+13. [Event Modifiers](https://github.com/AnushaDeviR/learn-svelte/tree/lesson-13)
