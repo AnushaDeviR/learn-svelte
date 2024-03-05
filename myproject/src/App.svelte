@@ -1,6 +1,7 @@
 <script>
   import Modal from "./Modal.svelte";
 
+  let showModal = false;
   let people = [
     { name: "yoshi", beltColour: "black", age: 25, id: 1 },
     { name: "mario", beltColour: "orange", age: 45, id: 2 },
@@ -11,10 +12,20 @@
     /* This function deletes person from the people array by filtering people when the id clicked is not equal to the id present  */
     people = people.filter((person) => person.id != id);
   };
+
+  const toggleModal = () => {
+    showModal = !showModal;
+  };
 </script>
 
-<Modal message="Hey, props here" isPromo={true} />
+<Modal
+  message="Hey, props here"
+  {showModal}
+  isPromo={true}
+  on:click={toggleModal}
+/>
 <main>
+  <button on:click={toggleModal}>Open Modal</button>
   {#each people as person (person.id)}
     <div>
       <h4>{person.name}</h4>
