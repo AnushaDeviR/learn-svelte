@@ -30,3 +30,4 @@
 8. [Conditionals](https://github.com/AnushaDeviR/learn-svelte/tree/lesson-8)
 9. [Components](https://github.com/AnushaDeviR/learn-svelte/tree/lesson-9)
 10. [CSS & Conditional Styles](https://github.com/AnushaDeviR/learn-svelte/tree/lesson-10)
+11. [Props](https://github.com/AnushaDeviR/learn-svelte/tree/lesson-11)
