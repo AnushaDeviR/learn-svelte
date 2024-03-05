@@ -1,29 +1,9 @@
 # [Notes] Svelte Tutorial for Beginners - NetNinja
 
-# Svelte - CSS & Conditional Styles
+# Svelte - Props
 
-- The `global.css` file which is present under the public folder contains stylings that are applied across the project on different components.
+- Values passes into components are called _properties (props)_
 
-- Svelte bundles the css unique numbers to identify styling implemented upon each components.
+- In `export let message`, message is the prop being sent from `<Modal message={'I am a props'}/>` component. The `export` keyword indicates that the variable can be set from outside.
 
-## Conditional Styles
-
-```svelte
-<script>
-  let isPromo=true
-</script>
-
-<!-- promo class is applied upon the condition given by isPromo -->
-<div class="backdrop" class:promo={isPromo}>
-  <div class="modal">
-    <p>Sign up for offers!</p>
-  </div>
-</div>
-
-<style>
-  .promo .modal {
-    background-color: lightsalmon;
-    color: white;
-  }
-</style>
-```
+- The prop name and the variable name should be same.

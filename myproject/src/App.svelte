@@ -1,5 +1,5 @@
 <script>
-  import Modal from './Modal.svelte'
+  import Modal from "./Modal.svelte";
 
   let people = [
     { name: "yoshi", beltColour: "black", age: 25, id: 1 },
@@ -13,7 +13,7 @@
   };
 </script>
 
-<Modal/>
+<Modal message="Hey, props here" isPromo={true} />
 <main>
   {#each people as person (person.id)}
     <div>
