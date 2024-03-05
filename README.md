@@ -1,25 +1,16 @@
 # [Notes] Svelte Tutorial for Beginners - NetNinja
 
-# Svelte - Event Forwarding
+# Svelte - Event Modifiers
 
-- In order to forward an event to the component it is being used in the parent component, `on:click` without invoking any functions is set onto the child component.
+- Event modifiers can be tagged at the end the event on certain elements.
+
+- Common Event modifiers and its usage (ref: [Official Svelte Tutorial](https://learn.svelte.dev/tutorial/event-modifiers)):
+  - `once`: to check that the event can only fire once; then it removes the handler
+  - `preventDefault`: prevents the default action (eg: when submitting a form, its default action is to refresh the page, but by running preventDefault() it avoids it)
+  - `self`: to only fire the event if the clicked event is the target
 
 ```html
-<div class="backdrop" class:promo="{isPromo}" on:click />
-```
+<!--adding `self` after pipe (|) indicates that the event is triggered only when this element is clicked -->
 
-- Then on the parent component, the actual function that needs to trigger upon the event on the child component is passed.
-
-```html
-<script>
-  const toggleModal = () => {
-    showModal = !showModal;
-  };
-</script>
-<Modal
-  message="Hey, props here"
-  {showModal}
-  isPromo={true}
-  on:click={toggleModal}
-/>
+<div class="backdrop" class:promo="{isPromo}" on:click|self />
 ```
