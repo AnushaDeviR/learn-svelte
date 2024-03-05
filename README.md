@@ -33,3 +33,4 @@
 11. [Props](https://github.com/AnushaDeviR/learn-svelte/tree/lesson-11)
 12. [Event Forwarding](https://github.com/AnushaDeviR/learn-svelte/tree/lesson-12)
 13. [Event Modifiers](https://github.com/AnushaDeviR/learn-svelte/tree/lesson-13)
+14. [Slots](https://github.com/AnushaDeviR/learn-svelte/tree/lesson-14)
