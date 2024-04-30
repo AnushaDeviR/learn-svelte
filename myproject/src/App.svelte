@@ -18,12 +18,14 @@
   };
 </script>
 
-<Modal
-  message="Hey, props here"
-  {showModal}
-  isPromo={true}
-  on:click={toggleModal}
-/>
+<Modal {showModal} on:click={toggleModal}>
+  <div slot="title"><h3>Add a new person</h3></div> 
+  <form action="">
+    <input type="text" name="name" id="name" placeholder="Name" />
+    <input type="text" name="name" id="belt color" placeholder="Belt Color" />
+    <button>Add Person</button>
+  </form>
+</Modal>
 <main>
   <button on:click|once={toggleModal}>Open Modal</button>
   {#each people as person (person.id)}
