@@ -36,4 +36,5 @@
 14. [Slots](https://github.com/AnushaDeviR/learn-svelte/tree/lesson-14)
 15. [Forms #1](https://github.com/AnushaDeviR/learn-svelte/tree/lesson-15)
 16. [Forms #2](https://github.com/AnushaDeviR/learn-svelte/tree/lesson-16)
+17. [Dispatching Custom Events](https://github.com/AnushaDeviR/learn-svelte/tree/lesson-17)
 
