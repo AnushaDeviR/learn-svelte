@@ -17,13 +17,19 @@
   const toggleModal = () => {
     showModal = !showModal;
   };
+
+  const addPerson = (e) => {
+    const person = e.detail;
+    people = [person, ...people];
+    showModal = false;
+  };
 </script>
 
 <Modal {showModal} on:click={toggleModal}>
-  <AddPersonForm />
+  <AddPersonForm on:addPerson={addPerson} />
 </Modal>
 <main>
-  <button on:click|once={toggleModal}>Open Modal</button>
+  <button on:click={toggleModal}>Open Modal</button>
   {#each people as person (person.id)}
     <div>
       <h4>{person.name}</h4>

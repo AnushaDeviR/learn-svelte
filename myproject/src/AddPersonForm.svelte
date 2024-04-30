@@ -1,18 +1,28 @@
 <script>
+  import { createEventDispatcher } from "svelte";
+
+  let dispatch = createEventDispatcher();
+
   let name;
   let beltColour;
   let age;
-  //   let fighting = false;
-  //   let sneaking = false;
-  //   let running = false;
 
   let skills = [];
 
   const handleSubmit = () => {
-    console.log(name, age, beltColour);
+    const person = {
+      name,
+      age,
+      beltColour,
+      skills,
+      id: Math.random(),
+    };
+    // dispatching a custom event (addPerson)
+    dispatch("addPerson", person);
   };
 </script>
 
+<!-- When handleSubmit is invoked the dispatch is going to send the custom event and data -->
 <form on:submit|preventDefault={handleSubmit}>
   <input
     type="text"
